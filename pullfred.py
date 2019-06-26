@@ -6,7 +6,7 @@
 ## Input: Takes name of series to pull from FRED
 ################################################################################
 import sys
-def download_fred(series, api_key, = file_type='xml', obs_start='', obs_end='', units='', freq='', agg_method='', noisey=True):
+def download_fred(series, api_key, file_type='xml', obs_start='', obs_end='', units='', freq='', agg_method='', noisey=True):
 # Pulls a series from Fred and save it
 # Required inputs
 # series: Series name
@@ -41,4 +41,5 @@ def download_fred(series, api_key, = file_type='xml', obs_start='', obs_end='', 
     urllib.request.urlretrieve(url,savefile)
 ################################################################################
 ## Call script
-download_fred(sys.argv[1])
+api_key = sys.argv[2]
+download_fred(sys.argv[1], api_key)
