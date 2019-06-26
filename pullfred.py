@@ -41,4 +41,5 @@ def download_fred(series, api_key, = file_type='xml', obs_start='', obs_end='', 
     urllib.request.urlretrieve(url,savefile)
 ################################################################################
 ## Call script
-download_fred(sys.argv[1])
+api_key = sys.argv[2]
+download_fred(sys.argv[1], api_key)
